@@ -4,6 +4,8 @@
 - Text Recognition in early age (Fixed size)
 - Detection of 2D game
 
+![alt text](https://github.com/hmlaiac/NEW_AI/blob/main/opencv/Template%20Matching/img/outcome.png)
+
 ## Limitation
 - Fixed size of target (If target is blend or modified, hardly to detect the image)
 - The croped image should exited in the image
@@ -16,11 +18,30 @@
 ## Code highlight
 ### Simple matching
 ```
+full_copy = img.copy()
 
+method = eval('cv2.TM_CCOEFF')
+res = cv2.matchTemplate(full_copy,target1,method)
+
+height, width,channels = target1.shape
+min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+
+# Assign the Bottom Right of the rectangle
+top_left = max_loc
+bottom_right = (top_left[0] + width, top_left[1] + height)
+
+# Draw the Red Rectangle
+cv2.rectangle(full_copy,top_left, bottom_right, 255, 10)
+plt.imshow(full_copy)
+plt.show()
 ```
 ### Trick code
 
 ```
+if method in [cv2.TM_SQDIFF, cv2.TM_SQDIFF_NORMED]:
+        top_left = min_loc    
+    else:
+        top_left = max_loc
 ```
 
 ## Other concepts
