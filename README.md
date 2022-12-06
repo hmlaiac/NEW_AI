@@ -8,8 +8,8 @@
 
 ## Catalog
 ### :muscle:OpenCV
-#### [Object Detection](https://github.com/hmlaiac/NEW_AI/tree/main/opencv/Template%20Matching)
-- Template Matching
+#### Object Detection
+- [Template Matching](https://github.com/hmlaiac/NEW_AI/tree/main/opencv/Template%20Matching)
 - 
 ### :muscle:Tensorflow Supervised Learning
 ### :muscle:Reinforcement Learning
