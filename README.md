@@ -10,6 +10,6 @@
 ### :muscle:OpenCV
 #### Object Detection
 - [Template Matching](https://github.com/hmlaiac/NEW_AI/tree/main/opencv/Template%20Matching)
-- 
+- Corner, Edge Detection
 ### :muscle:Tensorflow Supervised Learning
 ### :muscle:Reinforcement Learning
