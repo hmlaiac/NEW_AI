@@ -8,15 +8,15 @@
 ## Catalog
 ### :muscle:Introduction
 - [Introduction English Version] Sorry, I need time to prepare English Tutorial
-- [人工智能普通話版 #1. 課程簡介](https://www.youtube.com/watch?v=-4ggmfdXbnM)
-- [人工智能粵語版 #1. 課程簡介](https://www.youtube.com/watch?v=eZHtGXjOE-w&t=418s)
+- [人工智能普通話版 #1. 課程簡介](https://youtu.be/-4ggmfdXbnM)
+- [人工智能粵語版 #1. 課程簡介](https://youtu.be/eZHtGXjOE-w)
 
 ### :muscle:OpenCV
 #### Object Detection
 - [Template Matching](https://github.com/hmlaiac/NEW_AI/tree/main/opencv/Template%20Matching)
   - [English Youtube Video]
-  - [普通話 Youtube 影片](https://www.youtube.com/watch?v=DXFriv1fUyw)
-  - [廣東話 Youtube 影片](https://www.youtube.com/watch?v=wxfHuGGJ4XQ&t=324s)
+  - [普通話 Youtube 影片](https://youtu.be/DXFriv1fUyw)
+  - [廣東話 Youtube 影片](https://youtu.be/wxfHuGGJ4XQ)
 
 - [Corner Detection](https://github.com/hmlaiac/NEW_AI/tree/main/opencv/Corner%20Detection)
   - [English Youtube Video]
