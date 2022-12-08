@@ -8,7 +8,7 @@
 
 
 ## :+1:Limitation
-- 
+- None
 
 ## :+1:Code highlight
 ### Canny with Manual Justification
