@@ -14,10 +14,8 @@
 ## :+1:Code highlight
 ### Harris Corner Detection
 ```
-@widgets.interact(x=(0, 1.00000), blockSize=(1,10), ksize=(3,30))
+@widgets.interact(x=(0, 1.0, 0.01), blockSize=(1,10), ksize=(3,30,2))
 def f(x=0, blockSize=1, ksize=3):
-    if ksize%2==0:
-        ksize+=1
     dst = cv2.cornerHarris(src=img2_gray,blockSize=blockSize,ksize=ksize,k=0.04)
     dst = cv2.dilate(dst,None)
     img2_copy = img2.copy()
