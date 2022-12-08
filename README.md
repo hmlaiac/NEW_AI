@@ -7,7 +7,7 @@
 - Contact me on my personal website: http://www.andiogame.com
 ## Catalog
 ### :muscle:Introduction
-- [Introduction English Version]
+- [Introduction English Version] Sorry, I need time to prepare English Tutorial
 - [人工智能普通話版 #1. 課程簡介](https://www.youtube.com/watch?v=-4ggmfdXbnM)
 - [人工智能粵語版 #1. 課程簡介](https://www.youtube.com/watch?v=eZHtGXjOE-w&t=418s)
 
