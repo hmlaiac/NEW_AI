@@ -17,6 +17,9 @@
   - [English Youtube Video]
   - [普通話 Youtube 影片]
   - [廣東話 Youtube 影片](https://www.youtube.com/watch?v=wxfHuGGJ4XQ&t=324s)
+
 - [Corner Detection](https://github.com/hmlaiac/NEW_AI/tree/main/opencv/Corner%20Detection)
+
+- [Edge Detection](https://github.com/hmlaiac/NEW_AI/tree/main/opencv/Edge%20Detection)
 ### :muscle:Tensorflow Supervised Learning
 ### :muscle:Reinforcement Learning
