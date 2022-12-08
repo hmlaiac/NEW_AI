@@ -25,7 +25,13 @@
 
 - [Edge Detection](https://github.com/hmlaiac/NEW_AI/tree/main/opencv/Edge%20Detection)
 ### :muscle:Tensorflow Supervised Learning
+- Deep Binary Learning
+- Deep Classification
+- Deep Regression
+
 ### :muscle:Reinforcement Learning
+- Q-Learning
+- Deep Q-Learning
 
 ## :muscle:Integrated Projects:
 ### Web+AI
