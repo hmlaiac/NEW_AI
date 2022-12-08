@@ -20,7 +20,7 @@
 
 - [Corner Detection](https://github.com/hmlaiac/NEW_AI/tree/main/opencv/Corner%20Detection)
   - [English Youtube Video]
-  - [普通話 Youtube 影片]
+  - [普通話 Youtube 影片](https://youtu.be/uhAhn4S0cIU)
   - [廣東話 Youtube 影片](https://youtu.be/5z1FIpYNwHM)
 
 - [Edge Detection](https://github.com/hmlaiac/NEW_AI/tree/main/opencv/Edge%20Detection)
