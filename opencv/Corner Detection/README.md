@@ -3,7 +3,7 @@
 ![alt text](https://github.com/hmlaiac/NEW_AI/blob/main/opencv/Corner%20Detection/img/img2.png)
 
 ## :+1:Usage
-- Calculate differentiation of two region to identify the corner of image
+- Calculate differentiation of regions to identify the corner of image
 - Check boards, Grids (A solution to detect edge but not very useful)
 
 
