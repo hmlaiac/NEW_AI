@@ -26,3 +26,16 @@
 - [Edge Detection](https://github.com/hmlaiac/NEW_AI/tree/main/opencv/Edge%20Detection)
 ### :muscle:Tensorflow Supervised Learning
 ### :muscle:Reinforcement Learning
+
+## :muscle:Integrated Projects:
+### Web+AI
+- How to deploy AI solutions with webpage or API?
+  - Django + TensorFlow
+
+### Game Bots
+- How to solve puzzle and dragon with limited steps?
+  - Reinforcement Learnign
+
+### Robotic AI
+- How to use Rasberry PI to build your first smart robot?
+  - Electronics + Reinforcement Learning + OpenCV + Simulations
