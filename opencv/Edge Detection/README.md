@@ -42,6 +42,9 @@ def f(const1=0, const2=1):
     edges = cv2.Canny(image=blurred_img, threshold1=lower, threshold2=upper)
     plt.imshow(edges, cmap='gray_r')
 ```
+## :+1:Problem Lists
+- Why blur the image?
+    - Reduce noise and unnessary details in image
 
 ## :+1:Reference
 - [Canny](https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html)
