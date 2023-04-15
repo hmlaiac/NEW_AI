@@ -1,5 +1,5 @@
-# Template Matching
-## :+1:Outcome
+# Contour Detection
+## :+1:Outcomes
 ![alt text](https://github.com/hmlaiac/NEW_AI/blob/main/opencv/Corner%20Detection/img/img2.png)
 
 ## :+1:Usage
