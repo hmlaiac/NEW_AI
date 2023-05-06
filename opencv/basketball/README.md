@@ -11,4 +11,9 @@
 - size in real world: 12-12.1 cm radius
 ![plot](./img/ball_radius.png)
 
-## B. 
+## B. Solutions
+1. HSV Color Filter
+2. Gray Image and Blur
+3. Erosion, Dialate and closing: [Reference link](https://opencv24-python-tutorials.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html)
+4. HoughCircles
+
