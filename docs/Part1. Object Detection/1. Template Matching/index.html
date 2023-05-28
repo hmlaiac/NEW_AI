@@ -1,0 +1,458 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>1. Template Matching · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../2. Corner Detection/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    NEW_AI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Part1. Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    1. Template Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../2. Corner Detection/">
+            
+                <a href="../2. Corner Detection/">
+            
+                    
+                    2. Corner Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../3. Edge Detection/">
+            
+                <a href="../3. Edge Detection/">
+            
+                    
+                    3. Edge Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../4. Contour Detection/">
+            
+                <a href="../4. Contour Detection/">
+            
+                    
+                    4. Contour Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../6. Integrated Project - Basketball/">
+            
+                <a href="../6. Integrated Project - Basketball/">
+            
+                    
+                    6. Integrated Project - Basketball
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../7. Yolo-V5/">
+            
+                <a href="../7. Yolo-V5/">
+            
+                    
+                    7. Yolo-V5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../others/internGPT/">
+            
+                <a href="../../others/internGPT/">
+            
+                    
+                    internGPT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../kaggle/Housing Price/">
+            
+                <a href="../../kaggle/Housing Price/">
+            
+                    
+                    Housing Price
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../kaggle/avocado_price/">
+            
+                <a href="../../kaggle/avocado_price/">
+            
+                    
+                    avocado_price
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../intro/">
+            
+                <a href="../../intro/">
+            
+                    
+                    intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../chatgpt/">
+            
+                <a href="../../chatgpt/">
+            
+                    
+                    chatgpt
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../chatgpt/problem1/">
+            
+                <a href="../../chatgpt/problem1/">
+            
+                    
+                    problem1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >1. Template Matching</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="template-matching">Template Matching</h1>
+<h2 id="a-usage">A. Usage</h2>
+<ul>
+<li>Detect a croped image inside a image</li>
+<li>Text Recognition in early age (Fixed size)</li>
+<li>Detection of 2D game</li>
+</ul>
+<p><img src="https://github.com/hmlaiac/NEW_AI/blob/main/opencv/Template%20Matching/img/outcome.png" alt="alt text"></p>
+<h2 id="b-limitation">B. Limitation</h2>
+<ul>
+<li>Fixed size of target (If target is blend or modified, hardly to detect the image)</li>
+<li>The croped image should exited in the image</li>
+</ul>
+<h2 id="c-time-complexity">C. Time complexity</h2>
+<ul>
+<li>matchTemplate: O(n^3)</li>
+<li>minMaxLoc: O(n^2)</li>
+<li>Total: O(n^3)</li>
+</ul>
+<h2 id="d-code-highlight">D. Code highlight</h2>
+<h3 id="simple-matching">Simple matching</h3>
+<pre><code>full_copy = img.copy()
+
+method = eval(&apos;cv2.TM_CCOEFF&apos;)
+res = cv2.matchTemplate(full_copy,target1,method)
+
+height, width,channels = target1.shape
+min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)
+
+# Assign the Bottom Right of the rectangle
+top_left = max_loc
+bottom_right = (top_left[0] + width, top_left[1] + height)
+
+# Draw the Red Rectangle
+cv2.rectangle(full_copy,top_left, bottom_right, 255, 10)
+plt.imshow(full_copy)
+plt.show()
+</code></pre><h3 id="trick-code">Trick code</h3>
+<pre><code>if method in [cv2.TM_SQDIFF, cv2.TM_SQDIFF_NORMED]:
+        top_left = min_loc    
+    else:
+        top_left = max_loc
+</code></pre><h2 id="e-other-concepts">E. Other concepts</h2>
+<ul>
+<li>Calculate shape of result = W-w+1, H-h+1</li>
+<li><a href="https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html" target="_blank">Original Documentation</a></li>
+<li><a href="https://docs.opencv.org/4.x/df/dfb/group__imgproc__object.html#gga3a7850640f1fe1f58fe91a2d7583695dab65c042ed62c9e9e095a1e7e41fe2773" target="_blank">Equations of mathcing</a> </li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Part1. Object Detection">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../2. Corner Detection/" class="navigation navigation-next " aria-label="Next page: 2. Corner Detection">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"1. Template Matching","level":"1.2.1","depth":2,"next":{"title":"2. Corner Detection","level":"1.2.2","depth":2,"path":"Part1. Object Detection/2. Corner Detection/README.md","ref":"./Part1. Object Detection/2. Corner Detection/README.md","articles":[]},"previous":{"title":"Part1. Object Detection","level":"1.2","depth":1,"path":"Part1. Object Detection/README.md","ref":"./Part1. Object Detection/README.md","articles":[{"title":"1. Template Matching","level":"1.2.1","depth":2,"path":"Part1. Object Detection/1. Template Matching/README.md","ref":"./Part1. Object Detection/1. Template Matching/README.md","articles":[]},{"title":"2. Corner Detection","level":"1.2.2","depth":2,"path":"Part1. Object Detection/2. Corner Detection/README.md","ref":"./Part1. Object Detection/2. Corner Detection/README.md","articles":[]},{"title":"3. Edge Detection","level":"1.2.3","depth":2,"path":"Part1. Object Detection/3. Edge Detection/README.md","ref":"./Part1. Object Detection/3. Edge Detection/README.md","articles":[]},{"title":"4. Contour Detection","level":"1.2.4","depth":2,"path":"Part1. Object Detection/4. Contour Detection/README.md","ref":"./Part1. Object Detection/4. Contour Detection/README.md","articles":[]},{"title":"6. Integrated Project - Basketball","level":"1.2.5","depth":2,"path":"Part1. Object Detection/6. Integrated Project - Basketball/README.md","ref":"./Part1. Object Detection/6. Integrated Project - Basketball/README.md","articles":[]},{"title":"7. Yolo-V5","level":"1.2.6","depth":2,"path":"Part1. Object Detection/7. Yolo-V5/README.md","ref":"./Part1. Object Detection/7. Yolo-V5/README.md","articles":[]},{"title":"internGPT","level":"1.2.7","depth":2,"path":"others/internGPT/README.md","ref":"./others/internGPT/README.md","articles":[]},{"title":"Housing Price","level":"1.2.8","depth":2,"path":"kaggle/Housing Price/README.md","ref":"./kaggle/Housing Price/README.md","articles":[]},{"title":"avocado_price","level":"1.2.9","depth":2,"path":"kaggle/avocado_price/README.md","ref":"./kaggle/avocado_price/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part1. Object Detection/1. Template Matching/README.md","mtime":"2023-05-28T02:39:32.493Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-28T03:33:58.062Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
