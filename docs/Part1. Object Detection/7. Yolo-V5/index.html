@@ -1,0 +1,496 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7. Yolo-V5 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../others/internGPT/" />
+    
+    
+    <link rel="prev" href="../6. Integrated Project - Basketball/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    NEW_AI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Part1. Object Detection
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../1. Template Matching/">
+            
+                <a href="../1. Template Matching/">
+            
+                    
+                    1. Template Matching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../2. Corner Detection/">
+            
+                <a href="../2. Corner Detection/">
+            
+                    
+                    2. Corner Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../3. Edge Detection/">
+            
+                <a href="../3. Edge Detection/">
+            
+                    
+                    3. Edge Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../4. Contour Detection/">
+            
+                <a href="../4. Contour Detection/">
+            
+                    
+                    4. Contour Detection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../6. Integrated Project - Basketball/">
+            
+                <a href="../6. Integrated Project - Basketball/">
+            
+                    
+                    6. Integrated Project - Basketball
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    7. Yolo-V5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../../others/internGPT/">
+            
+                <a href="../../others/internGPT/">
+            
+                    
+                    internGPT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../../kaggle/Housing Price/">
+            
+                <a href="../../kaggle/Housing Price/">
+            
+                    
+                    Housing Price
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../../kaggle/avocado_price/">
+            
+                <a href="../../kaggle/avocado_price/">
+            
+                    
+                    avocado_price
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../intro/">
+            
+                <a href="../../intro/">
+            
+                    
+                    intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../chatgpt/">
+            
+                <a href="../../chatgpt/">
+            
+                    
+                    chatgpt
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../chatgpt/problem1/">
+            
+                <a href="../../chatgpt/problem1/">
+            
+                    
+                    problem1
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >7. Yolo-V5</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="a-installation">A. Installation</h1>
+<ol>
+<li>Clone the Yolo-v5 repository from github</li>
+</ol>
+<pre><code class="lang-shell">!git clone https://github.com/ultralytics/yolov5
+%cd yolov5/
+</code></pre>
+<ol>
+<li><p>Install necessary libraries for Yolo-V5 training</p>
+</li>
+<li><p>Use requirements.txt to install all required libraries quickly with following command</p>
+</li>
+</ol>
+<pre><code>!pip install -qr requirements.txt
+</code></pre><ul>
+<li><p>Common libraries for deep learning</p>
+<ul>
+<li>torch: a standrad deep learning library lauched by Facebook</li>
+<li>scipy: libray for scientific studies. Some tools such as Matrix calculation</li>
+<li>pandas: DataFrame library. Package data to a frame and display information easily</li>
+<li>numpy: sub-library in scipy.</li>
+<li>matplotlib.pyplot: Display library with graph</li>
+</ul>
+</li>
+<li><p>Check the setup</p>
+</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> torch
+
+<span class="hljs-keyword">from</span> IPython.display <span class="hljs-keyword">import</span> Image, clear_output  <span class="hljs-comment"># to display images</span>
+<span class="hljs-keyword">from</span> utils.downloads <span class="hljs-keyword">import</span> attempt_download  <span class="hljs-comment"># to download models/datasets</span>
+
+<span class="hljs-comment"># clear_output()</span>
+print(<span class="hljs-string">&apos;Setup complete. Using torch %s %s&apos;</span> % (
+    torch.__version__, torch.cuda.get_device_properties(<span class="hljs-number">0</span>) <span class="hljs-keyword">if</span> torch.cuda.is_available() <span class="hljs-keyword">else</span> <span class="hljs-string">&apos;CPU&apos;</span>))
+</code></pre>
+<p>It will output the cuda version of your computer. It is not important information for training but usually give you
+correct version if the current environment is avaible.</p>
+<h1 id="b-deploy-training-data-to-roboflow">B. Deploy training data to Roboflow</h1>
+<p>Roboflow works like Google Image but it is a platform to help you process and transfer images to the formated image of
+machine learning.</p>
+<p>Alternatively, you can use below tools to reduce costs of trainng</p>
+<ul>
+<li><a href="https://www.cvat.ai/" target="_blank">CVAT</a></li>
+<li><a href="https://viso.ai/computer-vision/labelimg-for-image-annotation/#:~:text=LabelImg%20is%20a%20straightforward%20and,files%20in%20PASCAL%20VOC%20format." target="_blank">LabelImg</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/machine-learning/how-to-guides/label-images-for-object-detection-using-vott" target="_blank">VOTT</a></li>
+</ul>
+<p>Although Roboflow will make your training easy, number of images / training data is limited. We may consider to use
+other tools to cut down the costs. However, we will use Roboflow to store training data at current stage because it
+greatly improve develop experience.</p>
+<h2 id="download-your-training-data-with-python-code">Download your training data with python code</h2>
+<ol>
+<li>Install roboflow<pre><code class="lang-shell">!pip install -q roboflow
+</code></pre>
+</li>
+<li>Direct to your data location<pre><code class="lang-shell">%cd /content/yolov5
+</code></pre>
+</li>
+<li>Run the python code to download formated data<pre><code class="lang-python"><span class="hljs-keyword">from</span> roboflow <span class="hljs-keyword">import</span> Roboflow
+rf = Roboflow(api_key=<span class="hljs-string">&quot;{api_secret}&quot;</span>)
+project = rf.workspace(<span class="hljs-string">&quot;{workspace}&quot;</span>).project(<span class="hljs-string">&quot;{project_name}&quot;</span>)
+<span class="hljs-comment"># This line will define what type of data you want to down from roboflow</span>
+dataset = project.version(<span class="hljs-number">1</span>).download(<span class="hljs-string">&quot;yolov5&quot;</span>)
+</code></pre>
+</li>
+</ol>
+<p>In this example, you can use some official data provided by <a href="https://public.roboflow.com/" target="_blank">Roboflow Data</a></p>
+<p>Different formats provided by Roboflow</p>
+<p><img src="img.png" alt="img.png"></p>
+<ol>
+<li>Check your downloaded data<pre><code class="lang-shell">%cat {dataset.location}/data.yaml
+</code></pre>
+</li>
+</ol>
+<p>&quot;data.yaml&quot; is a file to tell the system how to import images and labels from the directories</p>
+<p><img src="img_1.png" alt="img_1.png"></p>
+<p>Modify this template if you are using other tools to process training images</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">names:</span>
+<span class="hljs-bullet">-</span> head
+<span class="hljs-bullet">-</span> helmet
+<span class="hljs-bullet">-</span> person
+<span class="hljs-attr">nc:</span> <span class="hljs-number">3</span>
+<span class="hljs-attr">test:</span> ../test/images
+<span class="hljs-attr">train:</span> Hard-Hat-Sample<span class="hljs-bullet">-1</span>/train/images
+<span class="hljs-attr">val:</span> Hard-Hat-Sample<span class="hljs-bullet">-1</span>/valid/images
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../6. Integrated Project - Basketball/" class="navigation navigation-prev " aria-label="Previous page: 6. Integrated Project - Basketball">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../others/internGPT/" class="navigation navigation-next " aria-label="Next page: internGPT">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7. Yolo-V5","level":"1.2.6","depth":2,"next":{"title":"internGPT","level":"1.2.7","depth":2,"path":"others/internGPT/README.md","ref":"./others/internGPT/README.md","articles":[]},"previous":{"title":"6. Integrated Project - Basketball","level":"1.2.5","depth":2,"path":"Part1. Object Detection/6. Integrated Project - Basketball/README.md","ref":"./Part1. Object Detection/6. Integrated Project - Basketball/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Part1. Object Detection/7. Yolo-V5/README.md","mtime":"2023-05-14T07:47:06.483Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-28T03:33:58.062Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
